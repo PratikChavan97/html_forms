@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+ <html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Assignment HTML Form</title>
+		
+		<style>
+		
+		body{
+			color: white;
+			background-color: midnightblue;
+			font-family: sans-serif;
+			padding: 0.3em 2em;
+		}
+		
+		form{
+			width: 100%;
+			
+		}
+		
+		select{
+			padding: 5px;
+		}
+		
+		input, textarea, button{
+			background-color: transparent;
+			color: white;
+			font-size: 1em;
+		}
+		
+		.buttons{
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			gap: 2em;
+			margin: 1.2em 0 0 0;
+		}
+		
+		#submit, #reset{
+			padding: 10px;
+			font-weight: bold;			
+			border-radius: 10px;
+			border: 1px gray solid;
+		}
+		
+		.flex-container{
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			gap: 15px;
+			padding: 10px;
+		}
+		
+		.item label{
+			width: 30%;
+			display: inline-block;
+		}
+		
+		.item input{
+			width: 50%;
+			height: 25px;
+		}
+		
+		span{
+			margin-bottom: 10px;
+		}
+		
+		.inside-flex{
+			display: flex;
+			flex-direction: row;
+			gap: 25px;
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+		
+		h5{
+			text-align: center;
+			font-size: 1.4em;
+		}
+		
+		.user-container{
+			display:flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			gap: 20em;
+		}
+		
+		.user-grid{
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 10px;
+		}
+		
+		.first{
+			grid-column: span 2;
+		}
+		
+	
+		fieldset{
+			margin-top: 20px;
+			padding: 10px;
+		}
+		
+		legend{
+			font-size: 1.2em;
+		}
+		</style>
+	</head>
+	<body>
+	
+	<!-- 1st: login details {username, passwrod, email, mobile}-->
+	
+	<form method="post" action="">
+		<fieldset>
+			<legend>Login Details:</legend>
+			<div class="flex-container">
+				<div class="item">
+					<label for="username">Username: </label>
+					<input type="text" id="username" name="username" required placeholder="Your username" />
+				</div>
+				
+				<div class="item">
+					<label for="password">Password:</label>
+					<input type="password" id="password" name="password" required />
+				</div>
+				
+				<div class="item">
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" placeholder="abc123@email.com" required />
+				</div>
+				
+				<div class="item">
+					<label for="mobile">Your Mobile Number:</label>
+					<input type="tel" name="mobile" id="mobile" required placeholder="0123456789" /> 	
+				</div>
+			</div>
+		</fieldset>
+		<!-- first section completed -->
+		
+		
+		<!-- 2nd: personal details {gender, dob, fname, mname, lname, whatsapp, alternate number} -->
+		<fieldset>
+			<legend>Personal Details:</legend>
+			<div class="flex-container">
+				<div class="normal">
+					<span>Choose your gender:</span>
+					<div class="inside-flex">
+						<div class="inside-item">
+							<input type="radio" name="gender" id="male" required/>
+							<label for="male">Male</label>
+						</div>
+						<div class="inside-item">
+							<input type="radio" name="gender" id="female" required />
+							<label for="female">female</label>
+						</div>
+						<div class="inside-item">
+							<input type="radio" name="gender" id="other" required/>
+							<label for="other">Other</label>
+						</div>
+					</div>
+				</div>
+					
+				<div class="item">
+					<label for="firstname">First Name:</label>
+					<input type="text" id="firstname" name="firstname" required placeholder="John" />
+				</div>
+
+				<div class="item">
+					<label for="middlename">Middle Name:</label>
+					<input type="text" id="middlename" name="middlename" required placeholder="Smith" />
+				</div>
+				
+				<div class="item">
+					<label for="lastname">Last Name:</label>
+					<input type="text" id="lastname" name="lastname" required placeholder="Doe" />
+				</div>
+				
+				<div class="item">
+					<label for="dob">Date Of Birth:</label>
+					<input type="date" id="dob" name="dob" required/>
+				</div>
+			
+				<div class="item">
+					<label for="whatsapp">Your Whatsapp Number:</label>
+					<input type="tel" id="whatsapp" name="whatsapp" required placeholder="0987654123" />
+				</div>
+				
+				<div class="item">
+					<label for="alternate">Alternate Phone Number:</label>
+					<input type="tel" name="phone_number" id="alternate" required placeholder="0987654123" />
+				</div>
+			</div>
+		</fieldset>
+		<!-- 2nd section completed -->
+		
+		<!-- 3rd: Address, current and permanent address {block no, street, pincode, area, village, town, taluka, district, state, country} -->
+		<fieldset>
+			<legend>Address:</legend>
+			<div class="flex-container">
+				<div class="item">
+					<h5>Current Address:</h5>						
+						<label for="current_block">Block No.</label>
+						<input type="text" id="current_block" name="current_block" required placeholder="Sr. No. 23" />
+				</div>
+				<div class="item">
+						<label for="current_street">Street</label>
+						<input type="text" id="current_street" name="current_street" required placeholder="Watery Lane" />
+				</div>	
+				<div class="item">
+						<label for="current_pincode">Pincode</label>
+						<input type="number" id="current_pincode" name="current_pincode" required placeholder="444000" />
+				</div>
+				<div class="item">
+						<label for="current_block">Area</label>
+						<input type="text" id="current_block" name="current_block" required placeholder="Sr. No. 23" />
+				</div>
+				<div class="item">			
+						<label for="current_village">Village</label>
+						<input type="text" id="current_village" name="current_village" required placeholder="Washim" />						
+				</div>
+				<div class="item">
+						<label for="current_district">District</label>
+						<input type="text" id="current_district" name="current_district" required placeholder="Washim" />
+				</div>
+				<div class="item">
+						<label for="current_state">State</label>
+						<input type="text" id="current_state" name="current_state" required placeholder="Maharsahtra" />
+				</div>
+				<div class="item">				
+						<label for="current_country">Country</label>
+						<input type="text" id="current_country" name="current_country" required placeholder="India" />
+				</div>				
+				
+				<div class="item">
+					<h5>Permanent Address</h5>
+						<label for="permanent_block">Block No.</label>
+						<input type="text" id="permanent_block" name="permanent_block" required placeholder="Sr. No. 23" />
+				</div>
+				<div class="item">
+						<label for="permanent_street">Street</label>
+						<input type="text" id="permanent_street" name="permanent_street" required placeholder="Watery Lane" />
+				</div>
+				<div class="item">
+						<label for="permanent_pincode">Pincode</label>
+						<input type="number" id="permanent_pincode" name="permanent_pincode" required placeholder="410411" />
+				</div>
+				<div class="item">
+						<label for="permanent_block">Area</label>
+						<input type="text" id="permanent_block" name="permanent_block" required placeholder="Madhuban Baug" />
+				</div>
+				<div class="item">
+						<label for="permanent_village">Village</label>
+						<input type="text" id="permanent_village" name="permanent_village" required placeholder="washim" />
+				</div>
+				<div class="item">
+						<label for="permanent_district">District</label>
+						<input type="text" id="permanent_district" name="permanent_district" required placeholder="Pune" />
+				</div>
+				<div class="item">
+						<label for="permanent_state">State</label>
+						<input type="text" id="permanent_state" name="permanent_state" required placeholder="Maharsahtra" />
+				</div>
+				<div class="item">
+						<label for="permanent_country">Country</label>
+						<input type="text" id="permanent_country" name="permanent_country" required placeholder="India" />
+				</div>
+			</div>
+		</fieldset>
+		<!-- 3rd section completed -->
+		
+		<!-- 4th: qualifications {degree/course, university, passing year, percentage} -->
+		<fieldset>
+			<legend>Qualification:</legend>
+			<div class="flex-container">
+				<div class="item">
+					<label for="degree">Highest 
+					Education you have endured:</label>
+					<select id="degree" name="degree">
+						<option value="10th" selected>10th</option>
+						<option value="12th">12th</option>
+						<option value="diploma">Diploma</option>
+						<option value="under_graduate">UG</option>
+						<option value="post_graduate">PG</option>
+						<option value="phd">PHD</option>
+					</select>
+				</div>
+				
+				<div class="item">
+					<label for="university">Your University:</label>
+					<input type="text" id="university" name="university" required placeholder="SPPU" />
+				</div>
+					
+				<div class="item">
+					<label for="passing_year">Passing Year</label>
+					<input type="number" id="passing_year" name="passing_year" required min="2018" max="2030" />
+				</div>
+					
+				<div class="item">
+					<label for="percentage">Percentage</label>
+					<input type="number" name="percentage" id="percentage" min="35" max="40" required />
+				</div>
+					
+				<div class="item">	
+					<label for="course">Please mention any other courses you have taken:</label>
+					<input type="text" id="course" name="course"/>
+				</div>
+			</div>
+		</fieldset>
+		
+		
+		<!-- 5th: Interest/ hobbies {languages with level (beginner, intermediate, advance)} -->
+		
+		<fieldset>
+			<legend>About user:</legend>
+			<div class="flex-container">
+				<div class="user-grid">
+					<div class="user-item">
+						<label for="about_user">Tell us something about you</label>
+					</div>
+					<div class="user-item">
+						<textarea id="about_user" name="about_user" rows="5" cols="50" placeholder="I am an abitious person with dreams..."></textarea>
+					</div>
+				</div>
+				
+				<div class="user-grid">
+					<div>
+						<label for="hobbies">Let us know your hobbies</label>
+					</div>
+					<div>
+						<input type="text" id="hobbies" name="hobbies" />
+					</div>
+				</div>
+				<div class="user-grid">		
+					<div>
+						<label for="spoken_languages">Which languages can you speak?</label>
+					</div>
+					<div>
+						<select id="spoken_languages" name="spoken_languages">
+							<option value="english">English</option>
+							<option value="marathi">Marathi</option>
+							<option value="hindi">Hindi</option>
+							<option value="other">Other</option>
+						</select>
+					</div>
+				</div>
+					<div class="user-grid">
+						<div class="first">
+							<label for="coding_languages">Which programming languages you know. Mention your expertise on the scale of 0 to 100, where below 40 is beginner, 80 is intermediate, and 100 is advance.</label>
+						</div>
+						<div class="grid-item">
+							<input type="checkbox" id="html" name="html" required />
+							<label for="html">HTML</label>
+						</div>
+						<div class="grid-item">
+							<input type="range" min="0" max="100" step="20" required />
+						</div>
+						<div class="grid-item">
+							<input type="checkbox" id="css" name="css" required />
+							<label for="css">CSS</label>
+						</div>
+						<div class="grid-item">
+							<input type="range" min="0" max="100" step="20" required />
+						</div>
+						<div class="grid-item">
+							<input type="checkbox" id="javascript" name="javascript" required />
+							<label for="javascript">JavaScript</label>
+						</div>
+						<div class="grid-item">
+							<input type="range" min="0" max="100" step="20" required />
+						</div>
+						<div class="grid-item">
+							<input type="checkbox" id="nodejs" name="html" required />
+							<label for="nodejs">Node.js</label>
+						</div>
+						<div class="grid-item">
+							<input type="range" min="0" max="100" step="20" required />
+						</div>
+						<div class="grid-item">
+							<input type="checkbox" id="react" name="react" required />
+							<label for="react">React.js</label>
+						</div>
+						<div class="grid-item">
+							<input type="range" min="0" max="100" step="20" required />
+						</div>
+						<div class="grid-item">
+							<input type="checkbox" id="sql" name="sql" required />
+							<label for="sql">SQL</label>
+						</div>
+						<div class="grid-item">
+							<input type="range" min="0" max="100" step="20" required />
+						</div>
+						<div class="grid-item">
+							<input type="checkbox" id="mongodb" name="mongodb" required />
+							<label for="mongodb">MongoDB</label>
+						</div>
+						<div class="grid-item">
+							<input type="range" min="0" max="100" step="20" required />
+						</div>
+					</div>
+			</div>
+		</fieldset>
+		
+		<div class="buttons">
+			<button type="submit" value="Submit" id="submit">Submit</button>
+			<input type="reset" name="reset" id="reset" value="Reset"/>
+		</div>	
+	</form>
+	</body>
+ </html>
