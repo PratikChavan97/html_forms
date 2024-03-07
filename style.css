@@ -1,0 +1,241 @@
+body{
+			color: white;
+			background-color: seagreen;
+			font-family: sans-serif;
+			padding: 0.3em 2em;
+		}
+		
+		form{
+			width: 100%;
+			
+		}
+		
+		select{
+			padding: 5px;
+		}
+		
+		input, textarea, button{
+			background-color: white;
+			color: white;
+			font-size: 1em;
+			border-radius: 10px;
+		}
+		
+		input, textarea{
+			padding: 6px;
+			border: 1px solid white;
+		}
+		
+		input[placeholder]{
+			color: white;
+		}
+		.buttons{
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			gap: 2em;
+			margin: 1.7em 0 0 0;
+		}
+		
+		#submit, #reset{
+			padding: 10px;
+			font-weight: bold;			
+			border-radius: 10px;
+			border: 2px solid white;
+			outline: 3px solid gray;
+			color: seagreen;
+			font-size: 1.1em;
+		}
+		
+		#submit{
+			margin-right: 30px;
+		}
+		
+		.flex-container{
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			gap: 15px;
+			padding: 10px;
+		}
+		
+		.item label{
+			width: 30%;
+			display: inline-block;
+		}
+		
+		.item input{
+			width: 50%;
+			height: 25px;
+		}
+		
+		span{
+			margin-bottom: 10px;
+		}
+		
+		.inside-flex{
+			display: flex;
+			flex-direction: row;
+			gap: 25px;
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+		
+		h5{
+			text-align: center;
+			font-size: 1.4em;
+		}
+		
+		.user-container{
+			display:flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			gap: 20em;
+		}
+		
+		.user-grid{
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 10px;
+		}
+		
+		.first{
+			grid-column: span 2;
+		}
+		
+	
+		fieldset{
+			margin-top: 20px;
+			padding: 10px;
+		}
+		
+		legend{
+			font-size: 1.2em;
+		}
+		
+		h1{
+			text-align: center;
+			margin-bottom: 30px;
+		}body{
+			color: white;
+			background-color: seagreen;
+			font-family: sans-serif;
+			padding: 0.3em 2em;
+		}
+		
+		form{
+			width: 100%;
+			
+		}
+		
+		select{
+			padding: 5px;
+		}
+		
+		input, textarea, button{
+			background-color: white;
+			color: white;
+			font-size: 1em;
+			border-radius: 10px;
+		}
+		
+		input, textarea{
+			padding: 6px;
+			border: 1px solid white;
+		}
+		
+		input[placeholder]{
+			color: white;
+		}
+		.buttons{
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			gap: 2em;
+			margin: 1.7em 0 0 0;
+		}
+		
+		#submit, #reset{
+			padding: 10px;
+			font-weight: bold;			
+			border-radius: 10px;
+			border: 2px solid white;
+			outline: 3px solid gray;
+			color: seagreen;
+			font-size: 1.1em;
+		}
+		
+		#submit{
+			margin-right: 30px;
+		}
+		
+		.flex-container{
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			gap: 15px;
+			padding: 10px;
+		}
+		
+		.item label{
+			width: 30%;
+			display: inline-block;
+		}
+		
+		.item input{
+			width: 50%;
+			height: 25px;
+		}
+		
+		span{
+			margin-bottom: 10px;
+		}
+		
+		.inside-flex{
+			display: flex;
+			flex-direction: row;
+			gap: 25px;
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+		
+		h5{
+			text-align: center;
+			font-size: 1.4em;
+		}
+		
+		.user-container{
+			display:flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			gap: 20em;
+		}
+		
+		.user-grid{
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 10px;
+		}
+		
+		.first{
+			grid-column: span 2;
+		}
+		
+	
+		fieldset{
+			margin-top: 20px;
+			padding: 10px;
+		}
+		
+		legend{
+			font-size: 1.2em;
+		}
+		
+		h1{
+			text-align: center;
+			margin-bottom: 30px;
+		}

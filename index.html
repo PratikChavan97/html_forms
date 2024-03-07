@@ -4,120 +4,15 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Assignment HTML Form</title>
-		
-		<style>
-		
-		body{
-			color: white;
-			background-color: midnightblue;
-			font-family: sans-serif;
-			padding: 0.3em 2em;
-		}
-		
-		form{
-			width: 100%;
-			margin: auto;
-			
-		}
-		
-		select{
-			padding: 5px;
-		}
-		
-		input, textarea, button{
-			background-color: transparent;
-			color: white;
-			font-size: 1em;
-		}
-		
-		.buttons{
-			width: 70%;
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			gap: 2em;
-			margin: 1.2em 0 0 0;
-		}
-		
-		#submit, #reset{
-			padding: 10px;
-			font-weight: bold;			
-			border-radius: 10px;
-			border: 1px gray solid;
-		}
-		
-		.flex-container{
-			display: flex;
-			flex-direction: column;
-			justify-content: flex-start;
-			gap: 15px;
-			padding: 10px;
-		}
-		
-		.item label{
-			width: 30%;
-			display: inline-block;
-		}
-		
-		.item input{
-			width: 50%;
-			height: 25px;
-		}
-		
-		span{
-			margin-bottom: 10px;
-		}
-		
-		.inside-flex{
-			display: flex;
-			flex-direction: row;
-			gap: 25px;
-			margin-top: 5px;
-			margin-bottom: 5px;
-		}
-		
-		h5{
-			text-align: center;
-			font-size: 1.4em;
-		}
-		
-		.user-container{
-			display:flex;
-			flex-direction: row;
-			justify-content: flex-start;
-			align-items: center;
-			gap: 20em;
-		}
-		
-		.user-grid{
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			gap: 10px;
-		}
-		
-		.first{
-			grid-column: span 2;
-		}
-		
-	
-		fieldset{
-			margin-top: 20px;
-			padding: 10px;
-			width: 70%;
-		}
-		
-		legend{
-			font-size: 1.2em;
-		}
-		</style>
+		<link rel="stylesheet" href="./style.css">
 	</head>
 	<body>
-	
+		<h1>Applicant's Information</h1>
 	<!-- 1st: login details {username, passwrod, email, mobile}-->
 	
 	<form method="post" action="">
 		<fieldset>
-			<legend>Login Details:</legend>
+			<legend>Login Details</legend>
 			<div class="flex-container">
 				<div class="item">
 					<label for="username">Username: </label>
@@ -145,7 +40,7 @@
 		
 		<!-- 2nd: personal details {gender, dob, fname, mname, lname, whatsapp, alternate number} -->
 		<fieldset>
-			<legend>Personal Details:</legend>
+			<legend>Personal Details</legend>
 			<div class="flex-container">
 				<div class="normal">
 					<span>Choose your gender:</span>
@@ -200,10 +95,10 @@
 		
 		<!-- 3rd: Address, current and permanent address {block no, street, pincode, area, village, town, taluka, district, state, country} -->
 		<fieldset>
-			<legend>Address:</legend>
+			<legend>Address</legend>
 			<div class="flex-container">
 				<div class="item">
-					<h5>Current Address:</h5>						
+					<h5>Current Address</h5>						
 						<label for="current_block">Block No.</label>
 						<input type="text" id="current_block" name="current_block" required placeholder="Sr. No. 23" />
 				</div>
@@ -275,7 +170,7 @@
 		
 		<!-- 4th: qualifications {degree/course, university, passing year, percentage} -->
 		<fieldset>
-			<legend>Qualification:</legend>
+			<legend>Qualification</legend>
 			<div class="flex-container">
 				<div class="item">
 					<label for="degree">Highest 
@@ -316,7 +211,7 @@
 		<!-- 5th: Interest/ hobbies {languages with level (beginner, intermediate, advance)} -->
 		
 		<fieldset>
-			<legend>About user:</legend>
+			<legend>About user</legend>
 			<div class="flex-container">
 				<div class="user-grid">
 					<div class="user-item">
